@@ -13,5 +13,6 @@
     "deps": true,
     ".vscode": true
   },
+  "sasslint.enable": true,
   "workbench.colorTheme": "Default Dark+"
 }
