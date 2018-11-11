@@ -1,0 +1,17 @@
+{
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.rulers": [100],
+  "editor.wordWrapColumn": 100,
+  "files.exclude": {
+    "_build": true,
+    ".elixir_ls": true,
+    "**/node_modules": true,
+    "deps": true,
+    ".vscode": true
+  },
+  "workbench.colorTheme": "Darcula theme for Elixir"
+}

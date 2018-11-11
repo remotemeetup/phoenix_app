@@ -4,12 +4,22 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Manage your processes">
+    <meta name="author" content="Lucas Medeiros Leite">
     
     <title>.:: Taskify ::.</title>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+
+    <%= if Mix.env == :prod do %>
+      <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <% end %>
   </head>
   <body>
     <%= render @view_module, @view_template, assigns %>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    
+    <%= if Mix.env == :dev do %>
+      <script src="http://localhost:8080/app.js"></script>
+    <% else %>
+      <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <% end %>
   </body>
 </html>
