@@ -43,19 +43,6 @@ module.exports = merge(common, {
       },
 
       {
-        test: /\.(gif|png|jpe?g|svg|ico)$/,
-        use: ['file-loader'],
-        include: path.resolve(__dirname, '../src')
-      },
-
-      {
-        test: /\.(ttf|eot)$/,
-        loaders: ['file-loader?context=src/static/fonts/&name=fonts/[path][name].[ext]'],
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, '../src')
-      },
-      
-      {
         test: /\.(css|scss)$/,
         include: [path.resolve(__dirname, '../src')],
         use: [

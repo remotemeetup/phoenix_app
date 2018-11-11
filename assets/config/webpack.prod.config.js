@@ -40,26 +40,6 @@ module.exports = merge(common, {
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|ico)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: { limit: 40000 }
-          },
-          'image-webpack-loader'
-        ],
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, '../src'),
-      },
-
-      {
-        test: /\.(ttf|eot)$/,
-        loaders: ['file-loader?context=src/&name=../css/[name].[ext]'],
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, '../src')
-      },
-
-      {
         test: /\.(css|scss)$/,
         include: [path.resolve(__dirname, '../src')],
         use: ExtractTextPlugin.extract({
