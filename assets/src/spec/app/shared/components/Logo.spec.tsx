@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
-import { Logo } from '../../../../app/shared/components';
+import { Logo } from 'shared/components';
 
 describe('<Logo />', () => {
   const wrapper = shallow(<Logo />);

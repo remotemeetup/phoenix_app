@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "module": "es2015",
+    "target": "es2017",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noResolve": false,
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017.object",
+      "scripthost"
+    ],
+    "paths": {
+      "app/*": ["./src/app/*"],
+      "pages/*": ["./src/app/pages/*"],
+      "config/*": ["./src/app/config/*"],
+      "shared/*": ["./src/app/shared/*"],
+    }
+  },
+  "include": [
+    "./src/app/**/*",
+    "./src/spec/**/*"
+  ],
+  "exclude": [
+    "node_modules/",
+    "./config"
+  ]
+}

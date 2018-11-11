@@ -2,7 +2,11 @@ import logoImage from './Logo.png';
 import * as Styles from './Logo.scss';
 import * as React from 'react';
 
-export class Logo extends React.PureComponent {
+interface OwnProps {}
+
+export interface Props extends OwnProps {}
+
+export class Logo extends React.PureComponent<Props, {}> {
   render() {
     return (
       <div>

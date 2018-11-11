@@ -1,7 +1,11 @@
 import * as React from 'react';
 import * as Styles from './Header.scss';
 
-export class Header extends React.PureComponent {
+interface OwnProps {}
+
+export interface Props extends OwnProps {}
+
+export class Header extends React.PureComponent<Props, {}> {
   render() {
     return (
       <div>

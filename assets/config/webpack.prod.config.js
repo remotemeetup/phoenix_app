@@ -31,15 +31,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        include: path.resolve(__dirname, '../src'),
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-
-      {
         test: /\.(css|scss)$/,
         include: [path.resolve(__dirname, '../src')],
         use: ExtractTextPlugin.extract({

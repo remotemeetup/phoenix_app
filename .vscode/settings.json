@@ -13,5 +13,5 @@
     "deps": true,
     ".vscode": true
   },
-  "workbench.colorTheme": "Darcula theme for Elixir"
+  "workbench.colorTheme": "Default Dark+"
 }

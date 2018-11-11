@@ -1,0 +1,33 @@
+{
+  "extends": ["tslint:recommended", "tslint-react"],
+  "linterOptions": {
+    "exclude": [
+      "src/app/config/types/*",
+      "config/*"
+    ]
+  },
+  "rules": {
+    "eofline": true,
+    "no-require-imports": true,
+    "no-var-requires": true,
+    "cyclomatic-complexity": [true, 6],
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-string-throw": true,
+    "no-var-keyword": true,
+    "no-unused-expression": true,
+    "prefer-object-spread": true,
+    "max-classes-per-file": [true, 1],
+    "max-file-line-count": [true, 150],
+    "prefer-const": true,
+    "trailing-comma": true,
+    "align": true,
+    "ordered-imports": true,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "class-name": true,
+    "import-spacing": true,
+    "deprecation": true,
+    "prefer-template": true,
+    "no-unnecessary-type-assertion": true
+  }
+}

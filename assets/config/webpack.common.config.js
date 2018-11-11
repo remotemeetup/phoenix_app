@@ -3,12 +3,26 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   resolve: {
-    modules: ['node_modules', path.resolve(__dirname, '../src')],
-    extensions: ['.js', '.jsx'],
+    modules: ['deps', 'node_modules', path.resolve(__dirname, '../src')],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        include: path.resolve(__dirname, '../src'),
+        exclude: /(node_modules)/,
+        use: ['babel-loader', 'ts-loader'],
+      },
+
+      {
+        test: /\.(js|jsx)$/,
+        include: path.resolve(__dirname, '../src'),
+        exclude: /(node_modules)/,
+        use: ['babel-loader'],
+      },
+
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/,
         use: [
@@ -16,7 +30,7 @@ module.exports = {
             loader: 'url-loader',
             options: { limit: 40000 }
           },
-          'image-webpack-loader'
+          'image-webpack-loader',
         ],
         exclude: /node_modules/,
         include: path.resolve(__dirname, '../src'),
