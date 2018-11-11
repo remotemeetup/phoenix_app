@@ -7,6 +7,9 @@
   "scripts": {
     "clean": "rm -rf ../priv/static",
     "deploy": "yarn clean; webpack --config config/webpack.prod.config.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint:fix": "tslint -p tsconfig.json -c tslint.json --fix",
+    "lint:sass": "sass-lint --config app/config/.sass-lint.yml '**/*.scss' --verbose --no-exit",
     "spec": "jest src/spec",
     "spec:watch": "jest src/spec --watch",
     "spec:coverage": "jest src/spec --coverage",
@@ -43,6 +46,7 @@
     "image-webpack-loader": "^4.5.0",
     "jest": "^23.6.0",
     "node-sass": "^4.10.0",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "ts-jest": "^23.10.4",

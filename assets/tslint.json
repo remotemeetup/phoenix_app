@@ -8,6 +8,7 @@
   },
   "rules": {
     "eofline": true,
+    "interface-name": [true, "never-prefix"],
     "no-require-imports": true,
     "no-var-requires": true,
     "cyclomatic-complexity": [true, 6],
