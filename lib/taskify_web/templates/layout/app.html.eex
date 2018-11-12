@@ -9,6 +9,8 @@
     
     <title>.:: Taskify ::.</title>
 
+    <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/3.0.0/polaris.min.css" />
+
     <%= if Mix.env == :prod do %>
       <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
     <% end %>
