@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :taskify, TaskifyWeb.Endpoint,
+config :treffen, TreffenWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -34,13 +34,13 @@ config :taskify, TaskifyWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :taskify, TaskifyWeb.Endpoint,
+config :treffen, TreffenWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/taskify_web/views/.*(ex)$},
-      ~r{lib/taskify_web/templates/.*(eex)$}
+      ~r{lib/treffen_web/views/.*(ex)$},
+      ~r{lib/treffen_web/templates/.*(eex)$}
     ]
   ]
 
@@ -55,9 +55,9 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
-config :taskify, Taskify.Repo,
+config :treffen, Treffen.Repo,
   username: "postgres",
   password: "postgres",
-  database: "taskify_dev",
+  database: "treffen_dev",
   hostname: "localhost",
   pool_size: 10

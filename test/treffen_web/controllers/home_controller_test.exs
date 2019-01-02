@@ -1,5 +1,5 @@
-defmodule TaskifyWeb.HomeControllerTest do
-  use TaskifyWeb.ConnCase
+defmodule TreffenWeb.HomeControllerTest do
+  use TreffenWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

@@ -1,9 +1,9 @@
-defmodule Taskify.MixProject do
+defmodule Treffen.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :taskify,
+      app: :treffen,
       version: "1.0.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -16,7 +16,7 @@ defmodule Taskify.MixProject do
 
   def application do
     [
-      mod: {Taskify.Application, []},
+      mod: {Treffen.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

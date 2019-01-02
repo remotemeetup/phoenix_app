@@ -1,4 +1,4 @@
-defmodule TaskifyWeb.ConnCase do
+defmodule TreffenWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -18,17 +18,17 @@ defmodule TaskifyWeb.ConnCase do
   using do
     quote do
       use Phoenix.ConnTest
-      alias TaskifyWeb.Router.Helpers, as: Routes
+      alias TreffenWeb.Router.Helpers, as: Routes
 
-      @endpoint TaskifyWeb.Endpoint
+      @endpoint TreffenWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Taskify.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Treffen.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Taskify.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Treffen.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

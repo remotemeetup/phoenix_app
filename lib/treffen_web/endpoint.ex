@@ -1,7 +1,7 @@
-defmodule TaskifyWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :taskify
+defmodule TreffenWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :treffen
 
-  socket "/socket", TaskifyWeb.UserSocket,
+  socket "/socket", TreffenWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -11,7 +11,7 @@ defmodule TaskifyWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :taskify,
+    from: :treffen,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -39,8 +39,8 @@ defmodule TaskifyWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_taskify_key",
+    key: "_treffen_key",
     signing_salt: "VAqi9AOM"
 
-  plug TaskifyWeb.Router
+  plug TreffenWeb.Router
 end

@@ -1,5 +1,5 @@
-defmodule TaskifyWeb.Router do
-  use TaskifyWeb, :router
+defmodule TreffenWeb.Router do
+  use TreffenWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule TaskifyWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", TaskifyWeb do
+  scope "/", TreffenWeb do
     pipe_through :browser
 
     get "/", HomeController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TaskifyWeb do
+  # scope "/api", TreffenWeb do
   #   pipe_through :api
   # end
 end

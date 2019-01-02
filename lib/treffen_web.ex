@@ -1,4 +1,4 @@
-defmodule TaskifyWeb do
+defmodule TreffenWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels.
@@ -6,27 +6,27 @@ defmodule TaskifyWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: TaskifyWeb
+      use Phoenix.Controller, namespace: TreffenWeb
 
       import Plug.Conn
-      import TaskifyWeb.Gettext
-      alias TaskifyWeb.Router.Helpers, as: Routes
+      import TreffenWeb.Gettext
+      alias TreffenWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/taskify_web/templates",
-        namespace: TaskifyWeb
+        root: "lib/treffen_web/templates",
+        namespace: TreffenWeb
 
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
       use Phoenix.HTML
 
-      import TaskifyWeb.ErrorHelpers
-      import TaskifyWeb.Gettext
-      alias TaskifyWeb.Router.Helpers, as: Routes
+      import TreffenWeb.ErrorHelpers
+      import TreffenWeb.Gettext
+      alias TreffenWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -41,7 +41,7 @@ defmodule TaskifyWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import TaskifyWeb.Gettext
+      import TreffenWeb.Gettext
     end
   end
 

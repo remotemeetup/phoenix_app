@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :taskify, TaskifyWeb.Endpoint,
+config :treffen, TreffenWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
@@ -12,7 +12,7 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :taskify, TaskifyWeb.Endpoint,
+#     config :treffen, TreffenWeb.Endpoint,
 #       ...
 #       url: [host: "example.com", port: 443],
 #       https: [
@@ -36,7 +36,7 @@ config :logger, level: :info
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
 #
-#     config :taskify, TaskifyWeb.Endpoint,
+#     config :treffen, TreffenWeb.Endpoint,
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
@@ -51,7 +51,7 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-#     config :taskify, TaskifyWeb.Endpoint, server: true
+#     config :treffen, TreffenWeb.Endpoint, server: true
 #
 # Note you can't rely on `System.get_env/1` when using releases.
 # See the releases documentation accordingly.

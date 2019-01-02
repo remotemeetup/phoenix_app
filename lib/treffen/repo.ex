@@ -1,5 +1,5 @@
-defmodule Taskify.Repo do
+defmodule Treffen.Repo do
   use Ecto.Repo,
-    otp_app: :taskify,
+    otp_app: :treffen,
     adapter: Ecto.Adapters.Postgres
 end

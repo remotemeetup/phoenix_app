@@ -1,4 +1,4 @@
-defmodule TaskifyWeb.ChannelCase do
+defmodule TreffenWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -18,15 +18,15 @@ defmodule TaskifyWeb.ChannelCase do
   using do
     quote do
       use Phoenix.ChannelTest
-      @endpoint TaskifyWeb.Endpoint
+      @endpoint TreffenWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Taskify.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Treffen.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Taskify.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Treffen.Repo, {:shared, self()})
     end
 
     :ok

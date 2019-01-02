@@ -1,5 +1,5 @@
-defmodule TaskifyWeb.ErrorView do
-  use TaskifyWeb, :view
+defmodule TreffenWeb.ErrorView do
+  use TreffenWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

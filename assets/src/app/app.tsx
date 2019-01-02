@@ -7,7 +7,7 @@ export class App extends React.PureComponent<{}, {}> {
   public render() {
     return (
       <AppProvider>
-        <Page title="Taskify">
+        <Page title="Remote meetup">
           <Card sectioned={true}>
             <div className={Styles.MainContainer}>
               <div className={Styles.Topbar}>
